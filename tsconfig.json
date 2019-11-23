@@ -1,0 +1,12 @@
+  
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "skipLibCheck": true,
+      "strict": true,
+      "types": [
+        "cypress"
+      ]
+    }
+  }
