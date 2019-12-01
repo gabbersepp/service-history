@@ -1,10 +1,8 @@
 import { openPage } from "../support/BaseUiFunctions"
 import Locators from "../support/Locators";
-import ServiceEntryHelper from "../support/ServiceEntryHelper";
+import * as entryPage from "../support/pages/EntryDetailPage";
 
 describe("Create new service entry", () => {
-    const entryHelper = new ServiceEntryHelper();
-
     beforeEach(() => {
         openPage().get(Locators.newEntryButton).click();
     })
@@ -22,7 +20,7 @@ describe("Create new service entry", () => {
     })
 
     it("create valid entry", () => {
-        entryHelper.fillNewEntry()
+        entryPage.fillNewEntry()
             .get(Locators.saveBtn).click()
             .get(Locators.successMessageBox).should("be.visible");
     })
