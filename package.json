@@ -21,7 +21,7 @@
   "homepage": "https://github.com/gabbersepp/service-history#readme",
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^4.1.1",
-    "cypress": "^3.6.1",
+    "cypress": "^3.7.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2"
