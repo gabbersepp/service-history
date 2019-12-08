@@ -7,11 +7,13 @@ export const entryDetailPage = {
     },
     fillCategory(text: string) {
         cy.get(Locators.categoryField).find("input").type(text).trigger("change")
-            .get(`${Locators.categoryField} .sb-search-results`).contains(text).click();
+            .get(`${Locators.categoryField} .sb-result-item`).should("be.visible")
+            .contains(text).should("be.visible")
+            .then($e => $e.click()); // workaround: onClick is not firing
             return this;
     },
     fillName(name: string) {
-        cy.get(Locators.nameField).type("Test name");
+        cy.get(Locators.nameField).type(name);
         return this;
     },
     save(): Cypress.Chainable<JQuery> {
