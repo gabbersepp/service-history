@@ -17,7 +17,6 @@ describe("New service entry", () => {
         })
     })
 
-
     context("validation", () => {
         it("Validate mandatory fields", () => {
             cy.get(Locators.saveBtn).click()
@@ -37,11 +36,21 @@ describe("New service entry", () => {
         context("without pre-existing data", () => {
             it("should accept new category by typing category in", () => {
                 entryDetailPage.fillCategory("TestCat").fillName("TestName").save().reload();
-                entryList.allEntries.should("contain", "TestCat").and("contain", "TestName");
+                entryList.container.should("contain", "TestCat").and("contain", "TestName");
             })
-            it("should accept new category by typing category in and accept it", () => {
-                entryDetailPage.fillCategory("TestCat").fillName("TestName").save().reload();
-                entryList.allEntries.should("contain", "TestCat").and("contain", "TestName");
+        })
+
+        context("with pre-existing data", () => {
+            beforeEach(() => {
+                cy.window().then(window => {
+                    cy.fixture("service-entries.json").then(data => {
+                        window.localStorage.setItem("scheckheft_data", JSON.stringify(data));
+                    }).reload();
+                })
+            })
+ 
+            it("fixture data must be available", () => {
+                entryList.container.should("contain", "test name")
             })
         })
     })

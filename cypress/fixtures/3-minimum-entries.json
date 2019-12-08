@@ -1,0 +1,25 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "category": "test 1 cat",
+            "name": "test 1 name",
+            "additionalFields": {
+            }
+        },
+        {
+            "id": 2,
+            "category": "test 1 cat",
+            "name": "test 2 name",
+            "additionalFields": {
+            }
+        },
+        {
+            "id": 3,
+            "category": "test 2 cat",
+            "name": "test 3 name",
+            "additionalFields": {
+            }
+        }
+    ]
+}

@@ -30,7 +30,9 @@
                     "checked": false
                 }
             },
-            "notes": "notes\r\nwith\r\nbreaks"
+            "notes": "notes\r\nwith\r\nbreaks",
+            "inspectionWithAdditionalWork_select_TODO_in_english": "alle 90.000 km",
+            "imgSrc_TODO_free_image": "/static/media/audi.9c832654.png"
         }
     ]
 }
