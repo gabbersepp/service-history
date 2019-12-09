@@ -2,6 +2,7 @@
   "name": "scheckheft",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gabbersepp.github.io/service-history",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "~16.12.0",
