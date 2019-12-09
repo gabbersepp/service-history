@@ -1,0 +1,51 @@
+.is-entry-logo {
+    margin-top: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+  }
+
+  img.is-entry-logo {
+    height: 50px;
+    width: auto;
+  }
+
+  .image-selector {
+    width: 100%;
+  }
+  .is-empty {
+
+  }
+
+  #is-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+  }
+
+  #is-overlay-background {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    opacity: 0.8;
+    z-index: 100;
+  }
+
+  #is-overlay-container {
+    display: none;
+  }

@@ -1,0 +1,142 @@
+.service {
+    border:1px solid #c11327;
+    padding: 0.5rem;
+    align-self: stretch;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 0 10px 0 #1B1A28;
+    width: calc(50% - 1rem);
+    display: inline-block;
+  }
+
+  
+.input-holder, .check-holder {
+  margin-bottom: 0.5rem;
+}
+.input-holder >:first-child {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.input-holder >:last-child {
+  width: 75%;
+  display: inline-block;
+}
+
+.check-holder  >:first-child {
+  width: 70%;
+  display: inline-block;
+}
+
+.check-holder  >:last-child {
+  width: 30%;
+  display: inline-block;
+}
+
+input[type='text'] {
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: -1px;
+}
+
+input[type='text']:focus-within {
+  background-color: #F5F0EB;
+  border-bottom: none;
+  outline: none;
+}
+
+
+.yesno-holder > * {
+  width: 10%;
+  display: inline-block;
+  text-align: right;
+}
+
+.yesno-holder > :first-child {
+ width: 80%;
+ display: inline-block;
+ text-align: left;
+}
+
+.yesno-holder.inputable > :first-child {
+  width: 50%
+}
+
+.yesno-holder.inputable > :nth-child(2) {
+  width: 30%;
+  padding: 0;
+}
+
+.new-labeled .chk {
+  margin-right: 33%;
+}
+
+.strong {
+ font-weight: bold;
+}
+
+.distance {
+margin-top: 1rem;
+}
+
+.indented {
+padding-left: 1rem;
+}
+
+.printable {
+  display: none;
+}
+
+@media(max-width: 1134px) {
+  .service {
+    width: 100%;
+  }
+}
+
+@media print {
+  .service {
+    width: calc(50% - 1rem) !important;
+  }
+
+  nav {
+    display: none !important;
+  }
+
+  .is-entry-logo {
+    margin-top: 0 !important;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  body, html {
+    font-size: 12px !important;
+    color: black !important;
+  }
+
+  .button-row {
+    display: none !important;
+  }
+
+  .add-btn {
+    display: none;
+  }
+
+  .displayable {
+    display: none;
+  }
+
+  .printable {
+    display: block;
+  }
+}
+

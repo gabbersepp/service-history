@@ -1,4 +1,6 @@
 import Locators from "../Locators";
+import InputComponent from "../components/InputComponent";
+import { additionalItems } from "../components/AdditionalItemsComponent";
 
 export const entryDetailPage = {
     fillNewEntry(): Cypress.Chainable<JQuery> {
@@ -18,5 +20,11 @@ export const entryDetailPage = {
     },
     save(): Cypress.Chainable<JQuery> {
         return cy.get(Locators.saveBtn).click();
+    },
+
+    components: {
+        nameField: new InputComponent(Locators.nameField),
+
+        additionalItems: additionalItems
     }
 }

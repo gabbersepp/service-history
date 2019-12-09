@@ -1,0 +1,17 @@
+#global-config {
+  justify-content: space-around;
+}
+#global-config > * {
+    width: 25%;
+    background-color: white;
+    align-self: center;
+    display: flex;
+  }
+  
+  #global-config > *:focus-within {
+    background-color: #F5F0EB;
+  }
+
+  #global-config > * > label {
+    padding: 0.5rem;
+  }

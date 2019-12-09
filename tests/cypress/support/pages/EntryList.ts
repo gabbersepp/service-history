@@ -1,5 +1,4 @@
-import Locators from "../Locators";
-import InputComponent from "../components/InputComponent";
+import { entryDetailPage } from "./EntryDetailPage";
 
 export const entryList = {
     get container() {
@@ -13,10 +12,6 @@ export const entryList = {
     },
     open(name: string) {
         return entryList.items.contains(name).click().then(() => 
-            entryList.components.nameField.getValue().should("contain", name))
-    },
-
-    components: {
-        nameField: new InputComponent(Locators.nameField)
+            entryDetailPage.components.nameField.getValue().should("contain", name))
     }
 }

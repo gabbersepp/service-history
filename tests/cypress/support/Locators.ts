@@ -24,4 +24,8 @@ export default class Locators {
     public static inspection12MonthChkb = "#inspection-12month-chkb";
     public static inspectionWithAdditionalChkb = "#inspection-with-additional-chkb";
 
+    // additional items
+    public static additionalItemsContainer = "#additional-items";
+    public static newAdditionalItem = ".add-btn";
+    public static lastAdditionalItem = `div[id^='new-item-']:last-child`;
 }

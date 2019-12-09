@@ -6,4 +6,8 @@ export default class InputComponent {
     public getValue() {
         return cy.get(this.locator).invoke("val") as any as Cypress.Chainable<string>;
     }
+
+    public setValue(str: string) {
+        return cy.get(this.locator).type(str);
+    }
 }
