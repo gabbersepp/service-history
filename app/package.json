@@ -21,6 +21,7 @@
     "electron-packager": "13.0.1",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "4.3.0",
+    "gh-pages": "^2.1.1",
     "html-webpack-plugin": "3.2.0",
     "react-scripts": "3.2.0",
     "style-loader": "1.0.0",
@@ -36,7 +37,9 @@
     "dev": "webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.config.js",
     "package": "webpack --config webpack.build.config.js",
     "postpackage32": "electron-packager ./ --out=./builds --arch ia32",
-    "postpackage64": "electron-packager ./ --out=./builds --arch x64"
+    "postpackage64": "electron-packager ./ --out=./builds --arch x64",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
