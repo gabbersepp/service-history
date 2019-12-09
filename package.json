@@ -2,7 +2,7 @@
   "name": "service-history",
   "version": "1.0.0",
   "scripts": {
-    "pretest": "cd app && npm install && cd ../app && npm install",
+    "pretest": "cd app && npm install && cd ../tests && npm install",
     "start": "cd app && npm run start",
     "cy:run-record": "cd tests && npm run cy:run-record",
     "cy:ci": "start-server-and-test start http-get://localhost:3000 cy:run-record"
