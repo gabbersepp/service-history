@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "config:base"
+  ],
+   "ignoreDeps": ["react", "react-dom", "react-redux", "redux", "electron", "electron-packager", "react-scripts", "webpack", "webpack-cli", "webpack-dev-server"]
+}
