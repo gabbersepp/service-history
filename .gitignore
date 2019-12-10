@@ -60,3 +60,5 @@ typings/
 # next.js build output
 .next
 /app/build
+/tests/cypress/screenshots
+/tests/cypress/videos
