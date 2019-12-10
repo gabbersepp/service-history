@@ -1,6 +1,8 @@
 import { entryDetailPage } from "../support/pages/EntryDetailPage"
 import { entryList } from "../support/pages/EntryList";
 import { openNewEntryPage } from "../support/BaseUiFunctions";
+import ServiceEntryDto from "../../contracts/ServiceEntryDto";
+import ServiceEntryListDto from "../../contracts/ServiceEntryListDto";
 
 describe("Additional items", () => {
     const additionalItems = entryDetailPage.components.additionalItems;
@@ -26,6 +28,24 @@ describe("Additional items", () => {
             entryDetailPage.save().reload();
             entryList.open(name);
             entryDetailPage.components.additionalItems.container.should("contain", name);
+        })
+    })
+
+    describe("existing service entry", () => {
+        beforeEach(() => {
+            openNewEntryPage().window().its("localStorage").then(ls => {
+                cy.fixture("service-entry-with-additional-items.json").then((data: ServiceEntryListDto) => {
+                    ls.setItem("scheckheft_data", JSON.stringify(data));
+                    cy.reload();
+                    entryList.open(data.items[0].name);
+                })
+            })
+        })
+
+        it("additional items should be visible", () => {
+            entryDetailPage.components.additionalItems.item(1).title.getValue().should("contain", "additional field 1");
+            entryDetailPage.components.additionalItems.item(2).title.getValue().should("contain", "additional field 2");
+            entryDetailPage.components.additionalItems.item(3).title.getValue().should("contain", "additional field 3");
         })
     })
 })

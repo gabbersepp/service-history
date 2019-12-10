@@ -1,0 +1,38 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "category": "test cat",
+            "name": "test name",
+            "date": "12.2.2019",
+            "distance": "120000",
+            "vin": "vin number",
+            "mkb": "mkb number",
+            "gkb": "gkb number",
+            "breakFluidChanged": true,
+            "inspectionWithAdditionalWork": true,
+            "inspectionWithAdditionalWork90k": true,
+            "repairRecommendation": true,
+            "coolantChange": false,
+            "vRibbedBeltChange": true,
+            "airFilterChange": true,
+            "additionalFields": {
+                "1": {
+                    "name": "additional field 1",
+                    "checked": true
+                },
+                "2": {
+                    "name": "additional field 2",
+                    "checked": false
+                },
+                "3": {
+                    "name": "additional field 3",
+                    "checked": false
+                }
+            },
+            "notes": "notes\r\nwith\r\nbreaks",
+            "inspectionWithAdditionalWork_select_TODO_in_english": "alle 90.000 km",
+            "imgSrc_TODO_free_image": "/static/media/audi.9c832654.png"
+        }
+    ]
+}

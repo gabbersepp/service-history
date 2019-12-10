@@ -2,6 +2,7 @@ import ServiceEntryDto from "../../contracts/ServiceEntryDto"
 import ServiceEntryListDto from "../../contracts/ServiceEntryListDto"
 import { entryList } from "../support/pages/EntryList"
 import Locators from "../support/Locators"
+import { entryDetailPage } from "../support/pages/EntryDetailPage"
 
 describe("Existing items should be loaded", () => {
     beforeEach(() => {
@@ -35,10 +36,10 @@ describe("Existing items should be loaded", () => {
 
     it("service entry is loaded on click", () => {
         entryList.open("test 1 name");
-        entryList.components.nameField.getValue().should("contain", "test 1 name");
+        entryDetailPage.components.nameField.getValue().should("contain", "test 1 name");
         entryList.open("test 2 name");
-        entryList.components.nameField.getValue().should("contain", "test 2 name");
+        entryDetailPage.components.nameField.getValue().should("contain", "test 2 name");
         entryList.open("test 3 name");
-        entryList.components.nameField.getValue().should("contain", "test 3 name");
+        entryDetailPage.components.nameField.getValue().should("contain", "test 3 name");
     })
 })

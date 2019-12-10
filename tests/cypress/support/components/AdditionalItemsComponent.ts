@@ -1,5 +1,6 @@
 import Locators from "../Locators"
 import InputComponent from "./InputComponent";
+import AdditionalItemComponent from "./AdditionalItemComponent";
 
 export const additionalItems = {
     get container() {
@@ -12,7 +13,8 @@ export const additionalItems = {
         }
         return newItem;
     },
-    lastItem: {
-        title: new InputComponent(Locators.lastAdditionalItem)
+    lastItem: new AdditionalItemComponent(Locators.lastAdditionalItem),
+    item(i: number) {
+        return new AdditionalItemComponent(i);
     }
 }
