@@ -2,15 +2,6 @@
   "extends": [
     "config:base"
   ],
-  "packageRules": [
-        {
-          "paths": ["app/package.json"],
-          "labels": ["app", "Renovate"]
-        },
-        {
-          "paths": ["tests/package.json"],
-          "labels": ["tests", "Renovate"]
-        }
-  ],
-   "ignoreDeps": ["react", "react-dom", "react-redux", "redux", "electron", "electron-packager", "react-scripts", "webpack", "webpack-cli", "webpack-dev-server"]
+  "ignorePaths": [],
+  "ignoreDeps": ["react", "react-dom", "react-redux", "redux", "electron", "electron-packager", "react-scripts", "webpack", "webpack-cli", "webpack-dev-server"]
 }
