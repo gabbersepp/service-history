@@ -23,7 +23,7 @@ class YesNoCheckbox extends Component {
         ) : null;
 
         return (
-            <div className={`yesno-holder ${(this.props.showInput || this.props.showSelect) ? "inputable" : ""}`}>
+            <div id={this.props.id} className={`yesno-holder ${(this.props.showInput || this.props.showSelect) ? "inputable" : ""}`}>
                 <label className={this.props.className}>{this.props.label}</label>{input || select}<Checkbox checked={this.state.yes} onChange={val => this.yes(val)}/><Checkbox checked={!this.state.yes} onChange={val => this.no(val)}/>
             </div>
         )
@@ -60,6 +60,7 @@ const mapDispatchToProps = {
 export default connect(mapStateToProps, mapDispatchToProps)(YesNoCheckbox);
 
 YesNoCheckbox.propTypes = {
+    id: PropTypes.number,
     className: PropTypes.string,
     label: PropTypes.string.isRequired,
     property: PropTypes.string.isRequired,

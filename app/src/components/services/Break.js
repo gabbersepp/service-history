@@ -13,13 +13,14 @@ class Break extends Component {
         
         return (
             <ServiceBox>
-                <h1>Ölwechsel-Service</h1>
-                <div className="yesno-holder">
-                    <label>&nbsp;</label><label>ja</label><label>nein</label>
+                <div id="oil-change-service">
+                    <h1>Ölwechsel-Service</h1>
+                    <div className="yesno-holder">
+                        <label>&nbsp;</label><label>ja</label><label>nein</label>
+                    </div>
+                    <YesNoCheckbox id="oil-change-service-normal" label="Ölwechsel-Service" property="oilChangeService" checked={this.props.data.oilChangeService}/>
+                    <YesNoCheckbox id="oil-change-service-flexible" label="Ölwechsel-Service (flexibel)" property="oilChangeServiceFlex" checked={this.props.data.oilChangeServiceFlex}/>
                 </div>
-                <YesNoCheckbox  label="Ölwechsel-Service" property="oilChangeService" checked={this.props.data.oilChangeService}/>
-                <YesNoCheckbox  label="Ölwechsel-Service (flexibel)" property="oilChangeServiceFlex" checked={this.props.data.oilChangeServiceFlex}/>
-                
                 <div className="distance"></div>
                 <h1>Inspektion</h1>
                 <div className="yesno-holder">

@@ -1,6 +1,7 @@
-import Locators from "../Locators";
-import InputComponent from "../components/InputComponent";
 import { additionalItems } from "../components/AdditionalItemsComponent";
+import InputComponent from "../components/InputComponent";
+import YesNoComponent from "../components/YesNoComponent";
+import Locators from "../Locators";
 
 export const entryDetailPage = {
     fillNewEntry(): Cypress.Chainable<JQuery> {
@@ -12,7 +13,7 @@ export const entryDetailPage = {
             .get(`${Locators.categoryField} .sb-result-item`).should("be.visible")
             .contains(text).should("be.visible")
             .then($e => $e.click()); // workaround: onClick is not firing
-            return this;
+        return this;
     },
     fillName(name: string) {
         cy.get(Locators.nameField).type(name);
@@ -25,6 +26,7 @@ export const entryDetailPage = {
     components: {
         nameField: new InputComponent(Locators.nameField),
 
-        additionalItems: additionalItems
+        additionalItems: additionalItems,
+        oilChangeService: new YesNoComponent(Locators.oilChangeService)
     }
 }

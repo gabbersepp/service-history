@@ -28,4 +28,7 @@ export default class Locators {
     public static additionalItemsContainer = "#additional-items";
     public static newAdditionalItem = ".add-btn";
     public static lastAdditionalItem = `div[id^='new-item-']:last-child .displayable`;
+
+    // oilchange
+    public static oilChangeService = "#oil-change-service-normal";
 }
