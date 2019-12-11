@@ -1,4 +1,5 @@
 import InputComponent from "./InputComponent";
+import CheckboxComponent from "./CheckboxComponent";
 
 export default class AdditionalItemComponent {
     private locator: string;
@@ -11,11 +12,7 @@ export default class AdditionalItemComponent {
         }
     }
 
-    public get title() {
-        return new InputComponent(this.locator);
-    }
+    public get title() { return new InputComponent(this.locator); }
 
-    public get checkbox() {
-        throw new Error();
-    }
+    public get checkbox() { return new CheckboxComponent(`${this.locator} .checkbox-component`); }
 }

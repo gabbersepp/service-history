@@ -11,6 +11,9 @@ export const additionalItems = {
         if (title) {
             additionalItems.lastItem.title.setValue(title);
         }
+        if (checked) {
+            additionalItems.lastItem.checkbox.setValue(checked);
+        }
         return newItem;
     },
     lastItem: new AdditionalItemComponent(Locators.lastAdditionalItem),

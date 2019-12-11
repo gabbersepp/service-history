@@ -27,5 +27,5 @@ export default class Locators {
     // additional items
     public static additionalItemsContainer = "#additional-items";
     public static newAdditionalItem = ".add-btn";
-    public static lastAdditionalItem = `div[id^='new-item-']:last-child`;
+    public static lastAdditionalItem = `div[id^='new-item-']:last-child .displayable`;
 }

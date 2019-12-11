@@ -1,8 +1,7 @@
-import { entryDetailPage } from "../support/pages/EntryDetailPage"
-import { entryList } from "../support/pages/EntryList";
-import { openNewEntryPage } from "../support/BaseUiFunctions";
-import ServiceEntryDto from "../../contracts/ServiceEntryDto";
 import ServiceEntryListDto from "../../contracts/ServiceEntryListDto";
+import { openNewEntryPage } from "../support/BaseUiFunctions";
+import { entryDetailPage } from "../support/pages/EntryDetailPage";
+import { entryList } from "../support/pages/EntryList";
 
 describe("Additional items", () => {
     const additionalItems = entryDetailPage.components.additionalItems;
@@ -44,8 +43,13 @@ describe("Additional items", () => {
 
         it("additional items should be visible", () => {
             entryDetailPage.components.additionalItems.item(1).title.getValue().should("contain", "additional field 1");
+            entryDetailPage.components.additionalItems.item(1).checkbox.isChecked().should("exist");
+
             entryDetailPage.components.additionalItems.item(2).title.getValue().should("contain", "additional field 2");
+            entryDetailPage.components.additionalItems.item(2).checkbox.isChecked().should("not.exist");
+
             entryDetailPage.components.additionalItems.item(3).title.getValue().should("contain", "additional field 3");
+            entryDetailPage.components.additionalItems.item(3).checkbox.isChecked().should("not.exist");
         })
     })
 })
