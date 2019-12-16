@@ -27,7 +27,8 @@ export function deleteImage(filePath) {
 
         return false;
     } else {
-        throw new Error("can not save image in browser mode");
+        // TODO
+        //throw new Error("can not save image in browser mode");
     }
 }
 
@@ -50,7 +51,7 @@ export function saveImage(localFilePath) {
 }
 
 export function getImageDir() {
-    if (fs) {
+    if (fs && fs.existsSync && fs.mkdirSync) {
         if (!fs.existsSync("../images")) {
             fs.mkdirSync("./../images");            
         }

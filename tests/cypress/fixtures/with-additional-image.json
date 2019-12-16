@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "category": "test 1 cat",
+            "name": "test 1 name",
+            "additionalFields": {},
+            "images": [
+                "img1.png",
+                "img2.jpg"
+            ]
+        }
+    ]
+}
