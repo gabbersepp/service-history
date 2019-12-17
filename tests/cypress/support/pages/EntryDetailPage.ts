@@ -22,6 +22,10 @@ export const entryDetailPage = {
     save(): Cypress.Chainable<JQuery> {
         return cy.get(Locators.saveBtn).click();
     },
+    delete(): Cypress.Chainable<JQuery> {
+        return cy.get(Locators.deleteBtn).click()
+            .get("#msg-box-container button").first().click();
+    },
 
     components: {
         nameField: new InputComponent(Locators.nameField),

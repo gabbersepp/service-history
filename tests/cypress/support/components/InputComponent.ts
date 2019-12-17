@@ -3,11 +3,15 @@ export default class InputComponent {
         this.locator = `${this.locator} input`;
     }
 
+    public get container() {
+        return cy.get(this.locator);
+    }
+
     public getValue() {
-        return cy.get(this.locator).invoke("val") as any as Cypress.Chainable<string>;
+        return this.container.invoke("val") as any as Cypress.Chainable<string>;
     }
 
     public setValue(str: string) {
-        return cy.get(this.locator).type(str);
+        return this.container.type(str);
     }
 }

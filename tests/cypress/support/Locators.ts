@@ -3,6 +3,7 @@ export default class Locators {
     public static logoSelection = ".image-selector";
     public static logos = "#is-overlay-container .is-entry-logo";
     public static saveBtn = "#save";
+    public static deleteBtn = "#delete";
 
     public static errorMessageBox = "#message .error";
     public static successMessageBox = "#message .success";

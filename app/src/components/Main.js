@@ -18,7 +18,7 @@ class Main extends Component {
                 <div className="row button-row">
                     <button onClick={() => this.props.save()} id="save">Speichern</button>
                     <button onClick={() => this.print()}>Drucken</button>
-                    <button onClick={() => this.delete()}>Löschen</button>
+                    <button onClick={() => this.delete()} id="delete">Löschen</button>
                     
                 </div>
             </div>

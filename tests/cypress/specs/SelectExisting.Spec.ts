@@ -1,8 +1,7 @@
-import ServiceEntryDto from "../../contracts/ServiceEntryDto"
 import ServiceEntryListDto from "../../contracts/ServiceEntryListDto"
-import { entryList } from "../support/pages/EntryList"
 import Locators from "../support/Locators"
 import { entryDetailPage } from "../support/pages/EntryDetailPage"
+import { entryList } from "../support/pages/EntryList"
 
 describe("Existing items should be loaded", () => {
     beforeEach(() => {
@@ -11,7 +10,7 @@ describe("Existing items should be loaded", () => {
                 ls.setItem("scheckheft_data", JSON.stringify(items));
             })
         })
-        .visit("/")
+            .visit("/")
     })
 
     it("entry list items contain expected categories", () => {
@@ -41,5 +40,13 @@ describe("Existing items should be loaded", () => {
         entryDetailPage.components.nameField.getValue().should("contain", "test 2 name");
         entryList.open("test 3 name");
         entryDetailPage.components.nameField.getValue().should("contain", "test 3 name");
+    })
+
+    it("existing can be deleted", () => {
+        entryList.open("test 1 name");
+        entryDetailPage.delete();
+        entryDetailPage.components.nameField.container.should("not.exist");
+        entryList.items.should("not.contain", "test 1 name");
+        cy.get(Locators.successMessageBox).should("be.visible");
     })
 })
