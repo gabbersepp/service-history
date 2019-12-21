@@ -1,13 +1,17 @@
 const wp = require('@cypress/webpack-preprocessor')
 const CDP = require('chrome-remote-interface');
+const {
+  addMatchImageSnapshotPlugin,
+} = require('cypress-image-snapshot/plugin');
 
 let port = 0;
 
-module.exports = (on) => {
+module.exports = (on, config) => {
   const options = {
     webpackOptions: require('../webpack.config'),
   }
   on('file:preprocessor', wp(options))
+  addMatchImageSnapshotPlugin(on, config);
   on('before:browser:launch', (browser, args) => {
     port = ensureRdpPort(args);
   })
