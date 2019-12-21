@@ -6,10 +6,11 @@ describe("Non printable view", () => {
         openNewEntryPage();
     })
 
-    it("'text area should not be visible' should fsil in displayable view", () => {
+    it("'text area should not be visible' should fsil in displayable view", (done) => {
         cy.on("fail", (err: Error) => {
-            if (err.message.indexOf("timeout") > -1) {
-                return false;
+            debugger;
+            if (err.message.indexOf("Timed out retrying: expected '<textarea>' not to be 'visible'") > -1) {
+                done();
             }
         })
         entryDetailPage.components.notesField.should("not.be.visible");
@@ -22,6 +23,6 @@ describe("Printable view", () => {
     })
 
     it("'text area should not be visible' in print view", () => {
-        entryDetailPage.components.notesField.should("be.visible");
+        entryDetailPage.components.notesField.should("not.be.visible");
     })
 })
