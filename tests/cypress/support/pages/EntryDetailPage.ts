@@ -29,6 +29,7 @@ export const entryDetailPage = {
 
     components: {
         nameField: new InputComponent(Locators.nameField),
+        get notesField() { return cy.get("textarea"); },
 
         additionalItems: additionalItems,
         oilChangeService: new YesNoComponent(Locators.oilChangeService)
