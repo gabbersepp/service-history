@@ -6,7 +6,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:run-record": "cypress run --record --key 3f931c18-dad6-4027-8a43-8e1256f47a42"
+    "cy:run-record": "cypress run --headless --browser chrome --record --key 3f931c18-dad6-4027-8a43-8e1256f47a42"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/gabbersepp/service-history#readme",
   "devDependencies": {
     "@cypress/webpack-preprocessor": "4.1.1",
+    "chrome-remote-interface": "^0.28.1",
     "cypress": "3.8.0",
     "ts-loader": "6.2.1",
     "typescript": "3.7.3",
