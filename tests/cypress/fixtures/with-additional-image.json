@@ -8,7 +8,8 @@
             "images": [
                 "img1.png",
                 "img2.jpg"
-            ]
+            ],
+            "notes": "notes\r\nwith\r\nmany\r\ncontent\r\nand\r\nlinebreaks"
         }
     ]
 }

@@ -15,13 +15,15 @@ class General extends Component {
                 <TextInput showLabel={true} text="MKB" value={this.props.data.mkb} property="mkb" />
                 <TextInput showLabel={true} text="GKB" value={this.props.data.gkb} property="gkb" />
                 
-                <div className="input-holder displayable">
-                    <label>Notizen</label>
-                    <textarea placeholder="Notizen" value={this.props.data.notes} onChange={e => this.props.setData("notes", e.target.value)}></textarea>                
-                </div>
-                <div className="input-holder printable">
-                    <label>Notizen</label>     
-                    <div dangerouslySetInnerHTML={{__html:(this.props.data.notes || "").replace(/\n/g, "<br/>")}}></div>        
+                <div id="marker-notes">
+                    <div className="input-holder displayable">
+                        <label>Notizen</label>
+                        <textarea placeholder="Notizen" value={this.props.data.notes} onChange={e => this.props.setData("notes", e.target.value)}></textarea>                
+                    </div>
+                    <div className="input-holder printable">
+                        <label>Notizen</label>     
+                        <div dangerouslySetInnerHTML={{__html:(this.props.data.notes || "").replace(/\n/g, "<br/>")}}></div>        
+                    </div>
                 </div>
             </ServiceBox>
         )
