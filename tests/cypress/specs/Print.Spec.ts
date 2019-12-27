@@ -46,11 +46,11 @@ describe("Printable view", () => {
             });
         });
 
-        it.only("images should not be visible", () => {
+        it("images should not be visible", () => {
             cy.get(".img-holder").should("not.be.visible")
         })
 
-        it.only("'notes' field should show all content", () => {
+        it("'notes' field should show all content", () => {
             cy.get("#marker-notes").matchImageSnapshot();
         })
     })

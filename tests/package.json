@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "cy:run": "cypress run --headless --browser chrome --spec cypress/specs/Print.Spec.ts",
     "cy:run-record": "cypress run --headless --browser chrome --record --key 3f931c18-dad6-4027-8a43-8e1256f47a42"
   },
   "repository": {
@@ -21,7 +21,7 @@
   "devDependencies": {
     "@cypress/webpack-preprocessor": "4.1.1",
     "chrome-remote-interface": "^0.28.1",
-    "cypress": "3.8.0",
+    "cypress": "3.8.1",
     "cypress-image-snapshot": "^3.1.1",
     "ts-loader": "6.2.1",
     "typescript": "3.7.3",
