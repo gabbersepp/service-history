@@ -15,6 +15,7 @@ module.exports = (on, config) => {
   addMatchImageSnapshotPlugin(on, config);
   on('before:browser:launch', (browser, args) => {
     port = ensureRdpPort(args);
+    args.push('--window-size=1920,1080')
   })
   on("task", {
     activatePrintMediaQuery: async () => {

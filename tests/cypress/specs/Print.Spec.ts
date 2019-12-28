@@ -51,7 +51,10 @@ describe("Printable view", () => {
         })
 
         it("'notes' field should show all content", () => {
-            cy.get("#marker-notes").matchImageSnapshot();
+            cy.get("#marker-notes").matchImageSnapshot({
+                failureThreshold: 0.1, // threshold for entire image
+                failureThresholdType: 'percent', // percent of image or number of pixels 
+            });
         })
     })
 })
