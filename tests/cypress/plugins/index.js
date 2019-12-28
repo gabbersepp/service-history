@@ -5,6 +5,7 @@ const {
 } = require('cypress-image-snapshot/plugin');
 
 let port = 0;
+let client = null;
 
 module.exports = (on, config) => {
   const options = {
@@ -17,8 +18,15 @@ module.exports = (on, config) => {
   })
   on("task", {
     activatePrintMediaQuery: async () => {
-      const client = await CDP({ port });
+      client = await CDP({ port });
       return client.send('Emulation.setEmulatedMedia', { media: "print" })
+    },
+    resetCRI: async () => {
+      if (client) {
+        await client.close();
+      }
+
+      return Promise.resolve(true);
     }
   })
 }

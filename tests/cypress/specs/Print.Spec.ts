@@ -37,7 +37,7 @@ describe("Printable view", () => {
 
     describe("with existing data", () => {
         beforeEach(() => {
-            cy.fixture("with-additional-image.json").then((data: ServiceEntryListDto) => {
+            cy.task("resetCRI").fixture("with-additional-image.json").then((data: ServiceEntryListDto) => {
                 cy.window().its("localStorage").then(store => {
                     store.setItem("scheckheft_data", JSON.stringify(data));
                 }).visit("/")
@@ -50,7 +50,7 @@ describe("Printable view", () => {
             cy.get(".img-holder").should("not.be.visible")
         })
 
-        it.only("'notes' field should show all content", () => {
+        it("'notes' field should show all content", () => {
             cy.get("#marker-notes").matchImageSnapshot();
         })
     })
