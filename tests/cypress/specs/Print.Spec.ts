@@ -50,7 +50,7 @@ describe("Printable view", () => {
             cy.get(".img-holder").should("not.be.visible")
         })
 
-        it("'notes' field should show all content", () => {
+        it.only("'notes' field should show all content", () => {
             cy.get("#marker-notes").matchImageSnapshot();
         })
     })
