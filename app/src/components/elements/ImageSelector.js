@@ -15,7 +15,7 @@ export default class ImageSelector extends Component {
             showOverlay: false
         }
         this.showGalery = this.showGalery.bind(this);
-        this.images = [skoda, vw, seat, audi, vwaudi];
+        this.images = [skoda.default, vw.default, seat.default, audi.default, vwaudi.default];
     }
 
     render() {
@@ -42,11 +42,11 @@ export default class ImageSelector extends Component {
                 )}
                 {html}
                 <div style={{display: "none"}}>
-                <img src={audi}/>
-                <img src={vw}/>
-                <img src={skoda}/>
-                <img src={seat}/>
-                <img src={vwaudi}/>
+                <img src={audi.default}/>
+                <img src={vw.default}/>
+                <img src={skoda.default}/>
+                <img src={seat.default}/>
+                <img src={vwaudi.default}/>
                 </div>
             </div>
         )

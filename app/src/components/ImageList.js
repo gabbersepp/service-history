@@ -12,19 +12,19 @@ export default class ImageList extends Component {
         return (
             <div className="container image-list">       
                 <div>
-                <div style={{backgroundImage: "url(\'" + audi + "\')"}}/>
-                <div style={{backgroundImage: "url(\'" + vw + "\')"}}/>
+                <div style={{backgroundImage: "url(\'" + audi.default + "\')"}}/>
+                <div style={{backgroundImage: "url(\'" + vw.default + "\')"}}/>
             
                 </div>
                 <div>
-                <div style={{backgroundImage: "url(\'" + skoda + "\')"}}/>
+                <div style={{backgroundImage: "url(\'" + skoda.default + "\')"}}/>
                 
-                <div style={{backgroundImage: "url(\'" + seat + "\')"}}/>
+                <div style={{backgroundImage: "url(\'" + seat.default + "\')"}}/>
                 
                 </div>
 
                 <div>
-                <div style={{backgroundImage: "url(\'" + vwaudi + "\')"}}/>
+                <div style={{backgroundImage: "url(\'" + vwaudi.default + "\')"}}/>
                 
                 </div>
             </div>
