@@ -4,6 +4,7 @@ import { data } from "./../action/index";
 import Input from "./../components/elements/Input";
 import SearchBox from "./../components/elements/SearchBox";
 import "./../style/commonrow.css";
+import { distinct } from "./../logic/Utils";
 
 class CommonRow extends Component {    
     render() {
@@ -15,7 +16,7 @@ class CommonRow extends Component {
                 </div>
                 <div id="category-field">
                     <label>Kategorie:</label>
-                    <SearchBox items={this.props.items.map(x => x.category)} value={this.props.category} selectionChange={val => this.props.setData("category", val)}/>
+                    <SearchBox items={distinct(this.props.items.map(x => x.category))} value={this.props.category} selectionChange={val => this.props.setData("category", val)}/>
                 </div>
             </div>
         )
