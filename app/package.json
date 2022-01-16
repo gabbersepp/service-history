@@ -5,10 +5,10 @@
   "homepage": "https://gabbersepp.github.io/service-history",
   "dependencies": {
     "prop-types": "15.7.2",
-    "react": "~16.12.0",
-    "react-dom": "~16.12.0",
-    "react-redux": "^7.1.3",
-    "redux": "^4.0.4"
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-redux": "7.1.3",
+    "redux": "4.0.4"
   },
   "main": "main.js",
   "devDependencies": {
@@ -36,8 +36,8 @@
     "eject": "react-scripts eject",
     "dev": "webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.config.js",
     "package": "webpack --config webpack.build.config.js",
-    "postpackage32": "electron-packager ./ --out=./builds --arch ia32",
-    "postpackage64": "electron-packager ./ --out=./builds --arch x64",
+    "postpackage32": "electron-packager ./ --out=./builds --arch ia32 --overwrite",
+    "postpackage64": "electron-packager ./ --out=./builds --arch x64 --overwrite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
