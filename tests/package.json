@@ -23,7 +23,7 @@
     "chrome-remote-interface": "0.28.1",
     "cypress": "3.8.0",
     "ts-loader": "6.2.1",
-    "typescript": "3.7.3",
+    "typescript": "4.9.3",
     "webpack": "^4.41.2"
   }
 }
