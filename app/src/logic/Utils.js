@@ -19,3 +19,9 @@ export function applyImageViewer(element) {
         imgContainer.onclick = () => imgContainer.remove();
         document.getElementsByTagName("body")[0].appendChild(imgContainer);
 }
+
+export function distinct(listOfStrings) {
+    const obj = {};
+    listOfStrings.forEach(x => obj[x] = 1);
+    return Object.keys(obj);
+}

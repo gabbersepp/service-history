@@ -62,3 +62,5 @@ typings/
 /app/build
 /tests/cypress/screenshots
 /tests/cypress/videos
+/app/builds
+/app/dist

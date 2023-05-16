@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./../../style/searchbox.css";
+import { distinct } from "./../../logic/Utils";
 
 export default class SearchBox extends Component {
     constructor(props) {
@@ -16,7 +17,7 @@ export default class SearchBox extends Component {
             <div className="search-box">
                 <input type="text" value={this.state.currentInput} onChange={(e) => this.onChange(e.target.value)} />
                 <div className="sb-search-results">
-                    {this.state.filtered.map(i => (<div className="sb-result-item" key={i} onClick={() => this.select(i)}>{i}</div>))}
+                    {distinct(this.state.filtered).map(i => (<div className="sb-result-item" key={i} onClick={() => this.select(i)}>{i}</div>))}
                 </div>
             </div>
         )
