@@ -8,6 +8,6 @@
     "cy:ci": "start-server-and-test start http-get://localhost:3000 cy:run-record"
   },
   "devDependencies": {
-    "start-server-and-test": "1.10.6"
+    "start-server-and-test": "1.15.4"
   }
 }
